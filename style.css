@@ -1,0 +1,132 @@
+:root {
+  --fond: #e8eaec;
+  --carte: #ffffff;
+  --texte: #1b2328;
+  --gris: #5d6a72;
+  --principal: #2b3a42;
+  --accent: #f2b01e;
+  --bordure: #d3d8dc;
+  --ok: #1f7a4d;
+  --ko: #b3392b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+header {
+  background: var(--principal);
+  color: #fff;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+nav {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 10px 12px;
+  background: var(--carte);
+  border-bottom: 1px solid var(--bordure);
+}
+
+nav button {
+  flex: none;
+  background: none;
+  border: 1px solid var(--bordure);
+  color: var(--texte);
+  padding: 7px 13px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+nav button.actif {
+  background: var(--principal);
+  color: #fff;
+  border-color: var(--principal);
+}
+
+main { padding: 12px; max-width: 760px; margin: auto; }
+
+.carte {
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+h2, h3 { margin: 0 0 8px; }
+h3 { font-size: 16px; }
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 0 0 8px;
+  border: 1px solid var(--bordure);
+  border-radius: 6px;
+  background: var(--fond);
+  color: var(--texte);
+  font: inherit;
+}
+
+.btn {
+  background: var(--principal);
+  color: #fff;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 600;
+}
+
+.btn-petit {
+  background: none;
+  border: 1px solid var(--bordure);
+  color: var(--texte);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 13px;
+  margin-right: 6px;
+}
+
+.ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-top: 1px solid var(--bordure);
+}
+
+.droite { text-align: right; white-space: nowrap; }
+.gris { color: var(--gris); }
+.ok { color: var(--ok); }
+.ko { color: var(--ko); }
+
+.grille { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.case { background: var(--fond); border-radius: 6px; padding: 10px; }
+.case b { display: block; font-size: 18px; }
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bordure);
+  flex: none;
+}
+
+.connexion { max-width: 360px; margin: 12vh auto 0; padding: 0 14px; }
